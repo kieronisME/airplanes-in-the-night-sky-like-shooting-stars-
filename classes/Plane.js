@@ -13,16 +13,17 @@ class Plane {
         this.apWidth = obj.apWidth ?? 20;
         this.apHeight = obj.apHeight ?? 30;
         this.apTail = obj.apTail ?? 8;
+        this.alert = false;
     }
 
     renderPlanes() {
 
         push()
         translate(this.posX, this.posY)
-        rotate(atan2(this.valX, this.valY));
+        rotate(atan2(this.valY, this.valX));
         fill(100);
         stroke(255, 255, 255);
-        
+
 
         beginShape()
         vertex(0, 0) //this is the middle point of the Airplane
@@ -34,6 +35,15 @@ class Plane {
 
         endShape(CLOSE)
 
+        if (this.alert) {
+
+            noFill()
+            stroke(0, 0, 0)
+            ellipse(this.apHeight *0.03,0, this.apHeight * 1.2)
+
+            console.log("true");
+        }
+        
         pop()
 
     }

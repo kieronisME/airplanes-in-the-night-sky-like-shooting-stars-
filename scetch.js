@@ -34,14 +34,14 @@ function setup() {
     }))
 
     //airflied 02
-    airfeilds.push(new Airfeild({
-        width: 200 , 
-        hieght: 200, 
-        planeNum:10 , 
-        posX: 240 ,
-        posY: 20 ,
+    // airfeilds.push(new Airfeild({
+    //     width: 200 , 
+    //     hieght: 200, 
+    //     planeNum:10 , 
+    //     posX: 240 ,
+    //     posY: 20 ,
 
-    }))
+    // }))
 
 
 }
@@ -51,6 +51,8 @@ function draw() {
     background("#DADFF7");
     airfeilds.forEach(airfeild =>{
         airfeild.renderAirfeild();
+        airfeild.checkDist();
+
     })
 
 }
