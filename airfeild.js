@@ -1,6 +1,6 @@
 class Airfeild {
     constructor(obj) {
-        this.width = obj.width ?? 200;
+        this.width = obj.width ?? 500;
         this.height = obj.height ?? 200;
 
         this.posX = obj.posX ?? 100
@@ -76,33 +76,27 @@ class Airfeild {
 
         this.planes.forEach(plane => plane.alert = 0)
 
-        for (let i = 0; i > this.planes.length; i++) {
+        for (let i = 0; i < this.planes.length; i++) {
 
-            for (let j = i + 1; j > this.planes.length; i++) {
+            for (let j = i + 1; j < this.planes.length; j++) {
 
                 let planeA = this.planes[i];
                 let planeB = this.planes[j];
                 let dist = sqrt((sq(planeA.posX - planeB.posX) + (sq(planeA.posY - planeB.posY))));
                 
-
                 if(dist<10){
                     planeA.alert = true;
                     planeB.alert = true;
                 }
 
-                count++
-
+                // console.log(" 1 this is dist: " ,dist)
+           
             }
-            console.log("this is dist: " ,dist)
-
 
         }
-        console.log(dist)
-  
 
-
-    }
-
+    }  
+ 
 }
 
 

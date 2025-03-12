@@ -1,7 +1,7 @@
 
 //Screen
-const screenWidth = 1000;
-const screenHeight = 500;
+const screenWidth = 2000;
+const screenHeight = 2000;
 
 //airfeilds
 let airfeilds = [];
@@ -25,8 +25,8 @@ function setup() {
 
     //airflied 01
     airfeilds.push(new Airfeild({
-        width: 200 , 
-        hieght: 200, 
+        width: 1000 , 
+        height: 1000, 
         planeNum:10 , 
         posX: 20 ,
         posY: 20 ,
